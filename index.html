@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Protafolio Agustin G.</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="js/app.js"></script>
+		
+		<!-- Iconos de fontawesome -->
+		<link href="css/all.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- Fuentes de Google -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		
+	</head>
+	
+	<body>
+	
+		<!-- Cabecera de la pagina -->
+		<a name="ancla-inicio"></a>
+		
+		<div class="header_content">
+		
+			<div class="imgFondoHeader"></div>
+			
+			<div class="header_texto">
+				<h1 class="titulo_pagina">Agustín</h1>
+				<h2 class="sub_titulo_pagina">González Clemente</h2>
+				<h3 class="texto_pagina">Desarrollo de aplicaciones multiplataforma JAVA, C# y WEB</h3>
+				<p class="texto_pagina_small">Desarrollo de aplicaciones multiplataforma JAVA, C# y WEB</p>
+				<div class="button_down_box">
+					<a href="#ancla-tech" class="button_down"><i class="fas fa-chevron-down"></i></a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!-- Social Bar -->
+		<div class="social_bar" id="ocultaSocialBar">
+			<table class="social_table">
+				<tr><td class="rd_social_1 tooltip"><a href="https://www.youtube.com/channel/UCFuTNIKh_38TOw0XMRjxQgg"><i class="fab fa-youtube"></i></a><span class="tooltiptext">Youtube</span></td></tr>
+				<tr><td class="rd_social_2 tooltip"><a href="https://www.linkedin.com/in/agust%C3%ADn-g-3a7364126"><i class="fab fa-linkedin"></i></a><span class="tooltiptext">Linked in</span></td></tr>
+				<tr><td class="rd_social_3 tooltip"><a href="https://github.com/agusprogrammer"><i class="fab fa-github"></i></a><span class="tooltiptext">Github</span></td></tr>
+				<tr><td class="rd_social_4 tooltip">
+					<button onclick="openCloseForm()">
+						<i class="fas fa-envelope"></i></a><span class="tooltiptext">E-Mail</span>
+					</button>
+				</td></tr>
+				
+			</table>
+		</div>
+		
+		<!-- navegacion -->
+		<!-- barra de navegacion -->
+		<header class="header">
+				<table class="tabla_enlaces">
+					<tr>
+						<td><a href="#ancla-inicio">Inicio</a></td>
+						<td><a href="#ancla-tech">Tecnologias</a></td>
+						<td><a href="#ancla-proyectos">Proyectos</a></td>
+						<td><a href="#ancla-contacto">Contacto</a></td>
+					</tr>
+				</table>
+				<button class="btn_menu" onclick="openNav()"><i class="btn_menu_icon fas fa-bars"></i></button>
+		</header>
+		
+		<!-- menu sidenav oculto -->
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="#ancla-inicio">Inicio</a>
+			<a href="#ancla-tech">Tecnologias</a>
+			<a href="#ancla-proyectos">Proyectos</a>
+			<a href="#ancla-contacto">Contacto</a>
+		</div>
+		
+		<!-- contenido -->
+		<main>
+		
+			<!-- seccion tecnologias -->
+			<section class="sectionTech"> 
+				
+				<div>
+					<a name="ancla-tech"></a>
+				</div>
+				<h2 class="artH2">Tecnologias</h2>
+				
+				<article class="articleTech artTech_margen_left">
+					
+					<div class="container">
+						<div class="card">
+							<div class="box" id="cirProgress1">
+								<div class="percent">
+									
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+										<text class="texto_circulo" x="40" y="87">85%</text>
+									</svg>
+									
+									<h2 class="text">JAVA</h2>
+									
+									<ul class="lista_tech">
+										<li>Desarrollo movil con Android Studio y Firebase</li>
+										<li>Desarrollo BackEnd Api Rest</li>
+										<li>Acceso a datos SQL desde JAVA (Hibernate, JDBC)</li>
+										<li>Programación de JAVA en general</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</article>
+				
+				<article class="articleTech">
+					
+					<div class="container">
+						<div class="card">
+							<div class="box" id="cirProgress2">
+								<div class="percent">
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+										<text class="texto_circulo" x="30" y="87">90%</text>
+									</svg>
+									<h2 class="text">SQL</h2>
+									<ul class="lista_tech">
+										<li>Diseño de bases de datos SQL</li>
+										<li>Gestión y consultas SQL</li>
+										<li>Experiencia con MySQL WorkBench</li>
+										<li>Lenguaje SQL (aplicable tambien a otros SGBD).</li>
+										<!-- poner un enlace o una ayuda a (aplicable tambien a otros SGBD) -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<article class="articleTech">
+					
+					<div class="container">
+						<div class="card">
+							<div class="box" id="cirProgress3">
+								<div class="percent">
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+										<text class="texto_circulo" x="40" y="87">60%</text>
+									</svg>
+									<h2 class="text">WEB FRONTEND</h2>
+									<ul class="lista_tech">
+										<li>Angular TypeScript y Angular Material</li>
+										<li>Desarrollo web responsive</li>
+										<li>HTML, CSS y Javascript</li>
+										<li>JQuery básico</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				
+				<article class="articleTech">
+					
+					<div class="container">
+						<div class="card">
+							<div class="box" id="cirProgress4">
+								<div class="percent">
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+										<text class="texto_circulo" x="40" y="87">90%</text>
+									</svg>
+									<h2 class="text">WPF .Net</h2>
+									<ul class="lista_tech">
+										<li>Desarrollo de aplicaciones de escritorio WPF .Net</li>
+										<li>Programación con C#</li>
+										<li>Diseño de interfaces y acceso a bases de datos</li>
+										<li>Conocimientos básicos en otras tecnologias de .Net</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</article>
+				
+			</section>
+			
+			<div class="imgFondo imgFondo1"></div>
+			
+			
+			<!-- proyectos -->
+			<section class="sectionProy"> 
+				
+				<div>
+					<a name="ancla-proyectos"></a>
+				</div>
+				
+				<h2 class="artH2">Proyectos</h2>
+				
+				<article class ="articleProy">
+					
+					<h4>1 El portafolio (Front End)</h4>
+					
+					<p>Este portafolio el cual estas viendo ahora 
+					mismo es el primer proyecto que te presento, 
+					para hacerlo he usado HTML, CSS y algo de Javascript, 
+					es la web donde presento a mis otros proyectos 
+					y acceder a mi contacto, también he usado el diseño responsive.</p>
+					
+					<!-- enlaces proyecto -->
+					<div class="enlaces_img_proy">
+						<div class="enlace_img_p1">
+							<a class="enlace_img_p_github" href=""><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+					
+					<!-- tecnologias proyecto -->
+					<div class="article_badges_box">
+						
+						<div class="article_badge article_badge_HTML">
+							<p>HTML</p>
+						</div>
+						
+						<div class="article_badge article_badge_CSS">
+							<p>CSS</p>
+						</div>
+						
+						<div class="article_badge article_badge_JS">
+							<p>JS</p>
+						</div>
+						
+					</div>
+					
+				</article>
+				
+				<article class="articleProy">
+					
+					<h4>2 Proyecto inventario (Aplicación Escritorio)</h4>
+					
+					<!-- enlaces proyecto -->
+					<div class="enlaces_img_proy">
+						<div class="enlace_img_p">
+							<a class="enlace_img_p_youtube" href="https://www.youtube.com/watch?v=2250tNoobAQ"><i class="fab fa-youtube"></i></a>
+							<a class="enlace_img_p_github" href="https://github.com/agusprogrammer/ProyectoInventarioCodigo"><i class="fab fa-github"></i></a>
+							
+						</div>
+					</div>
+					
+					<img src="assets/img_project/Inventario.png" alt="img proyecto">
+					
+					<p>Este es un proyecto en WPF.Net en el que muestro mis 
+					conocimientos de WPF .Net, lo use durante el ciclo de 
+					desarrollo de aplicaciones en el módulo de diseño de interfaces.</p>
+					
+					<!-- tecnologias proyecto -->
+					<div class="article_badges_box">
+						
+						<div class="article_badge article_badge_CS">
+							<p>C#</p>
+						</div>
+						
+						<div class="article_badge article_badge_WPF">
+							<p>WPF .Net</p>
+						</div>
+						
+						<div class="article_badge article_badge_MYSQL">
+							<p>MySQL</p>
+						</div>
+						
+					</div>
+					
+				</article>
+				
+				<article class="articleProy">
+				
+					<h4>3 TPV (Aplicación Escritorio)</h4>
+					
+					<!-- enlaces proyecto -->
+					<div class="enlaces_img_proy">
+						<div class="enlace_img_p">
+							<a class="enlace_img_p_youtube" href="https://www.youtube.com/watch?v=fSJua50EehU"><i class="fab fa-youtube"></i></a>
+							<a class="enlace_img_p_github" href="https://github.com/agusprogrammer/ProyectoTPVCodigo"><i class="fab fa-github"></i></a>
+							
+						</div>
+					</div>
+					
+					<img src="assets/img_project/TPV.png" alt="img proyecto">
+					
+					<p>Este es el proyecto que hice para el módulo de 
+					proyecto del ciclo de Desarrollo de Aplicaciones 
+					Multiplataforma. Es una aplicación en WPF .Net que 
+					actua como un TPV.</p>
+					
+					<!-- tecnologias proyecto -->
+					<div class="article_badges_box">
+						
+						<div class="article_badge article_badge_CS">
+							<p>C#</p>
+						</div>
+						
+						<div class="article_badge article_badge_WPF">
+							<p>WPF .Net</p>
+						</div>
+						
+						<div class="article_badge article_badge_MYSQL">
+							<p>MySQL</p>
+						</div>
+						
+					</div>
+					
+				</article>
+				
+				<article class="articleProy">
+					
+					<h4>4 Red Social Angular (Back End y Front End)</h4>
+					
+					<!-- enlaces proyecto -->
+					<div class="enlaces_img_proy">
+						<div class="enlace_img_p">
+							<a class="enlace_img_p_youtube" href="https://www.youtube.com/watch?v=WMbgwIMebzs"><i class="fab fa-youtube"></i></a>
+							<a class="enlace_img_p_github" title="Interfaz Front End" href="https://github.com/agusprogrammer/angularRedSocial"><i class="fab fa-github"></i></a>
+							<a class="enlace_img_p_github" title="BackEnd" href="https://github.com/agusprogrammer/angularRedSocialApiJavaSpring"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+					
+					<img src="assets/img_project/Red_social.png" alt="img proyecto">
+					
+					<p>Este proyecto trata de una Api Rest hecha con Spring Boot Java, 
+					con una interfaz hecha con Angular y haciendo uso de componentes 
+					de Angular Material, funciona como una Red social con usuarios, 
+					peticiones de amistad y mensajes.</p>
+					
+					<!-- tecnologias proyecto -->
+					<div class="article_badges_box">
+						
+						<div class="article_badge article_badge_HTML">
+							<p>HTML</p>
+						</div>
+						
+						<div class="article_badge article_badge_CSS">
+							<p>CSS</p>
+						</div>
+						
+						<div class="article_badge article_badge_TYPE">
+							<p>Type Script</p>
+						</div>
+						
+						<div class="article_badge article_badge_ANGULAR">
+							<p>Angular</p>
+						</div>
+						
+						<div class="article_badge article_badge_SPRING">
+							<p>Spring Boot</p>
+						</div>
+						
+						<div class="article_badge article_badge_JAVA">
+							<p>JAVA</p>
+						</div>
+						
+						<div class="article_badge article_badge_MYSQL">
+							<p>MySQL</p>
+						</div>
+						
+					</div>
+					
+				</article>
+				
+			</section>
+			
+		</main>
+		
+		<div class="imgFondo imgFondo3"></div>
+		
+		<footer>
+			
+			<div class="footer-content">
+				<a name="ancla-contacto"></a>
+				
+				<!-- redes sociales del footer -->
+				<h2 class="footerH2">Contacto</h2>
+				
+				<div class="footer_box_red_espace">
+					<div class="footer_box_red">
+						<div class="footer_redes_youtube"><a href="https://www.youtube.com/channel/UCFuTNIKh_38TOw0XMRjxQgg"><i class="fab fa-youtube"></i></a></div>
+					</div>
+					<div class="footer_box_red">
+						<div class="footer_redes_linkedin"><a href="https://www.linkedin.com/in/agust%C3%ADn-g-3a7364126"><i class="fab fa-linkedin"></i></a></div>
+					</div>
+						
+					<div class="footer_box_red">
+						<div class="footer_redes_github"><a href="https://github.com/agusprogrammer"><i class="fab fa-github"></i></a></div>
+					</div>
+					
+					<div class="footer_box_red">
+						<button class="footer_redes_email" onclick="openCloseForm()"><i class="fas fa-envelope"></i></button>
+					</div>
+				</div>
+				
+				<!-- Formulario de contacto -->
+				<div class="footer_form" id="formContactDiv">
+					
+					<h1>Formulario</h1>
+					
+					<form class="form_input_margin" action="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x33;&#x64;&#x61;&#x67;&#x75;&#x73;&#x74;&#x69;&#x6e;&#x67;&#x6f;&#x6e;&#x7a;&#x61;&#x6c;&#x65;&#x7a;&#x31;&commat;&#x67;&#x6d;&#x61;&#x69;&#x6c;&period;&#x63;&#x6f;&#x6d;" onsubmit="return controlForm();" method="post" enctype="text/plain">
+					
+						<input type="email" name="email" placeholder="email@gmail.com" required class="input_texto_size">
+						<br>
+						
+						<input type="text" name="mensaje" placeholder="Mensaje" required class="input_texto_size">
+						<br>
+						
+						<div style="display: none;">
+							<label for="control">(Si se ve, no completar, campo de control)</label>
+							<input type="text" class="input_texto_size" id="controlSpam" name="control">
+						</div>
+						
+						<!-- capcha -->
+						
+						<input class="btn_form_enviar" type="submit" id="btnenv" value="Enviar">
+						<input class="btn_form_cancel" type="reset" id="btncancel" value="Borrar">
+					</form>
+					
+				</div>
+				
+			</div>
+			
+		</footer>
+		
+
+	</body>
+	
+</html>

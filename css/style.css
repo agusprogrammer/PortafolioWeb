@@ -1,0 +1,1729 @@
+/* 
+	style.css
+	
+	1 Estilos generales de la pagina
+	2 Navegacion
+		
+		- Barra header
+		- Menu side nav
+		- Social bar 
+	
+	3 Header 
+		
+		estilos de la parte de inicio, Imagen, titulo, subtitulo y descripcion
+		
+		- Textos del header
+		- Boton de ir abajo
+		- Imagen de fondo del header
+		
+	4 Media Querys
+		
+		Se encuentran los estilos que se cambian de manera 
+		responsive, esta organizado por tamanyo
+		
+		- Small
+		- Medium - Small
+		- Medium
+		- Medium - Big
+		- Big
+	
+	5 estilo principal
+		
+		- main
+		- divs con imagenes de fondo de la pagina
+		- Secciones y texto
+		- Enlaces de proyectos
+		- badges de proyectos
+		- estilos seccion tecnologias
+		- progress bar circular
+		
+	6 estilo footer
+	
+		- footer redes
+		- footer formulario
+	
+*/
+
+/* 1 Estilos generales de la pagina -------------- */
+html{
+  scroll-behavior: smooth; /*para los movimientos suaves con enlaces*/
+}
+
+body{
+	/* font-family: 'Roboto', sans-serif; */
+	font-family: sans-serif;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+/* 2 Navegacion ------------------- */
+/* barra header ------------------- */
+
+/* personalizacion de la barra de enlaces */
+.header{
+	width: 100%;
+	height: 65px;
+	margin: 0 auto;
+	background-color: #333;
+	color: white;
+	
+	/* cabecera fija */
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+/* enlaces de la tabla */
+.tabla_enlaces{
+	height: 100%;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: block;
+	float: left;
+}
+
+/* caja de cada enlace */
+.tabla_enlaces tr td a{
+	height: 100%;
+	margin-right: 1px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	/* background-color: #444; *//* color de la caja (opcional) */
+}
+
+.tabla_enlaces tr td a:hover{
+	background-color: #444;
+	cursor: pointer;
+}
+
+
+/*boton responsive oculto, se muestra si 
+se cambia a un menor ancho (Con el media Query de abajo)*/
+.btn_menu{
+	display: none;
+}
+
+/* Menu side nav ------------------ */
+
+/* ocultacion del menu */
+/* para mostrar el menu o el boton con la barra */
+@media only screen and (max-width: 550px) {
+	
+	.tabla_enlaces{
+		display: none;
+	}
+	
+	.btn_menu{
+		display: block;
+		float: right;
+		margin-top: 5px;
+		margin-right: 5px;
+		cursor: pointer;
+		width: 55px;
+		height: 55px;
+		background-color: #333;
+		border: 2px solid white;
+		border-radius: 4px;
+		color: white;
+		font-size: 30px;
+	}
+	
+	.btn_menu:hover{
+		background-color: #555;
+	}
+	
+	.social_bar{
+		display: none !important;
+	}
+	
+}
+
+/* estilos del menu side nav */
+
+/* Configuracion del side nav*/
+.sidenav{
+  height: 100%; 
+  width: 0; /* 0 width - se cambia con JavaScript */
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  /* left: 0; */ /* configuracion a la izquierda */
+  right: 0;		 /* configuracion a la derecha */
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s;
+}
+
+/* links del side nav */
+.sidenav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+/* Posicion y estilo del boton para cerrar el side nav */
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* transicion side nav */
+/* Style page content - use this if you want to push the page 
+content to the right when you open the side navigation */
+#main{
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* cambiar el estilo del sidenav en pantallas pequenyas */
+/* On smaller screens, where height is less than 450px, 
+change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+
+/* social bar ---------------------- */
+
+/* posicion del social bar*/
+.social_bar{
+	position: fixed;
+	/*margin-top: 160px;*/
+	margin-top: 0px;
+	display: block;
+	float: left;
+}
+
+/* tamanyo de las celdas */
+.social_table tr td{
+	
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+/* quitar social bar en pantallas pequenyas */
+@media (max-height: 450px){
+	.social_bar{
+		display:none !important;
+	}
+	
+}
+
+/* Tooltip text de la social bar */
+.tooltip .tooltiptext{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  margin-left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* mostrar los tooltip de la social bar*/
+.tooltip:hover .tooltiptext{
+  visibility: visible;
+}
+
+
+/* colores de fondo de cada celda */
+.rd_social_1{
+	background-color: #FF0000; 
+	transition-duration: 0.4s;
+}
+
+.rd_social_1:hover{
+	background-color: #850000;
+}
+
+.rd_social_2{
+	background-color: #006CFF; 
+	transition-duration: 0.4s;
+}
+
+.rd_social_2:hover{
+	background-color: #001885;
+}
+
+.rd_social_3{
+	background-color: #000000;
+	transition-duration: 0.4s;
+}
+
+.rd_social_3:hover{
+	background-color: #7800D0;
+}
+
+.rd_social_4{
+	background-color: #ADADAD;
+	transition-duration: 0.4s;
+	padding: 0px !important;
+}
+
+.rd_social_4:hover{
+	background-color: #FFFFFF;
+}
+
+.rd_social_4 a i{
+	color: black !important;
+}
+
+.social_table tr td a i{
+	color: white;
+	font-size: 30px;
+}
+
+.social_table tr td button{
+	background-color: transparent;
+	margin: 0px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-Style: none;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.social_table tr td button span{
+	font-size: 14px !important;
+}
+
+/* 3 Header --------------------- */
+
+/* Tamanyo del header (se cambia segun el ancho, mirar en la parte 4 de media querys)*/
+.header_content{
+	height: 200px;
+	width: 100%;
+}
+
+
+/* Textos del header --------------- */
+.header_texto{
+	color: white;
+	text-align: center;
+	position: relative;
+	display: block;
+    /*top: 5%;*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Los valores son por defecto, pero se cambian en los media querys (parte 4 de media querys) */
+.titulo_pagina{
+	margin: 0;
+	font-family: 'Roboto', sans-serif !important;
+}
+
+.sub_titulo_pagina{
+	margin: 0;
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif !important;
+}
+
+.texto_pagina{
+	margin: 0;
+	margin-top: 10px;
+}
+
+.texto_pagina_small{
+	margin-top: 10px;
+}
+
+/* Boton de ir abajo ------------------ */
+/* caja del boton (solo se muestra en pantallas grandes, se cambia con 
+la parte 4 de media querys)*/
+.button_down_box{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* estilo del boton para bajar hacia abajo (solo se muestra en pantallas grandes, 
+se cambia con la parte 4 de media querys))*/
+.button_down{
+	/* height: 40px;
+	width: 100px; */
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-top: 10px;
+	background: transparent;
+	color: white;
+	font-size: 30px;
+	border-style: none;
+	transition-duration: 0.4s;
+	/* border-radius: 20px; */
+	border-radius: 15px;
+}
+
+.button_down:hover{
+	background-color: rgb(117, 117, 117, 0.5);
+	
+}
+
+/* Imagen de fondo del header ---------------- */
+
+.imgFondoHeader{
+	filter:brightness(0.2);
+	background-color: rgba(0,0,0,0.5);
+	background-attachment: fixed; 
+	background-image: url("../assets/image/programming1.png");
+	height: 950px;
+	width: 100%;
+	float: left;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/*4 Media Querys --------------- */
+
+/*modelo caja responsive*/
+
+/*small*/
+@media (max-width: 450px){
+	
+	/* navigation */
+	.header_bar{
+		height: 50px !important;
+	}
+	
+	.navigation{
+		height: 50px !important;
+	}
+	
+	/* social bar */
+	.social_bar{
+		display: none;
+	}
+	
+	/* header */
+	.imgFondoHeader{
+		height: 300px !important;
+	}
+	
+	/* para el header de la pagina se oculta el texto de mayor tamanyo y se muestra la clase .texto_pagina_small */
+	/* texto para el header */
+	.texto_pagina{
+		display: none !important;
+	}
+	
+	/* el boton solo se muestra en pantalla grande*/
+	.button_down {
+		display: none !important;
+	}
+	
+	/* tecnologias */
+	.articleTech{
+		display: block;
+		width: 100%;
+		height: 400px !important;
+	}
+	
+	/* proyectos */
+	.articleProy h4{
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+		font-size: 1.25em !important;
+	}
+	
+	.enlaces_img_proy{
+		margin-bottom: 10px !important;
+		margin-top: 5px !important;
+	}
+	
+	.enlace_img_p1{
+		margin-left: 5% !important;
+	}
+	
+	.enlace_img_p{
+		text-align: center !important;
+	}
+	
+	.articleProy img{
+		width: 65% !important;
+		height: 50% !important;
+		display: block !important;
+		margin: auto !important;
+	}
+	
+	.articleProy p{
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
+	
+	.article_badges_box {
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
+	
+	.articleProy{
+		display: block !important;
+		width: 100% !important;
+		float: left !important;
+	}
+	
+	/* titulos de la pagina */
+	.artH2{
+		text-align: left !important;
+		font-size: 2em !important;
+	}
+	
+	/* footer y formularios */
+	.footerH2{
+		text-align: left !important;
+		font-size: 2em !important;
+		margin-left: 5% !important;
+	}
+	
+	.input_texto_size{
+		/* width: 200px; */
+		height: 20px !important;
+		font-size: 15px !important;
+		/* margin-left: 5px !important; */
+		/* width: 200px !important; */
+		
+		width: 95%;
+		
+		margin-left: 3% !important;
+		/*margin-right: 10% !important; */
+	}
+	
+	.btn_form_enviar{
+		margin-left: 3% !important;
+	}
+	
+	.footer_box_red_espace{
+		text-align: left !important;
+		margin-left: 5% !important;
+	}
+	
+}
+
+/* medium small*/
+@media (min-width: 451px) and (max-width: 550px){
+	
+	/* navigation */
+	.header_bar{
+		height: 50px !important;
+	}
+	
+	.navigation{
+		height: 50px !important;
+	}
+	
+	/* social bar */
+	.social_bar{
+		display: none;
+	}
+	
+	/* header */
+	.imgFondoHeader{
+		height: 400px !important;
+	}
+	
+	.texto_pagina{
+		display: none !important;
+	}
+
+	.button_down{
+		display: none !important;
+	}
+	
+	/* tecnologias */
+	.articleTech{
+		display: block;
+		width: 50%;
+		float: right;
+		height: 400px !important;
+	}
+	
+	/* Proyectos */
+	.articleProy h4{
+		margin-left: 7% !important;
+		margin-right: 5% !important;
+		font-size: 1.25em !important;
+	}
+	
+	.enlace_img_p1{
+		margin-left: 7%;
+	}
+	
+	.enlace_img_p{
+		text-align: center !important;
+	}
+	
+	.articleProy img{
+		width: 65% !important;
+		height: 50% !important;
+		display: block !important;
+		margin: auto !important;
+	}
+	
+	.articleProy p{
+		margin-left: 7% !important;
+		margin-right: 5% !important;
+	}
+	
+	/* badges proyectos */
+	.article_badges_box{
+		margin-left: 7% !important;
+		margin-right: 5% !important;
+	}
+	
+	.articleProy{
+		display: block !important;
+		width: 90% !important;
+		float: left !important;
+	}
+	
+	/* titulos */
+	.artH2{
+		text-align: left !important;
+		margin-left: 5% !important;
+	}
+	
+	/* footer y formulario */
+	.footerH2{
+		text-align: left !important;
+		font-size: 2em !important;
+		margin-left: 5% !important;
+	}
+	
+	.footer_box_red_espace{
+		text-align: left !important;
+		margin-left: 5% !important;
+	}
+	
+	.input_texto_size{
+		/* width: 200px; */
+		height: 20px !important;
+		font-size: 15px !important;
+		/* margin-left: 5px !important; */
+		/* width: 200px !important; */
+		
+		width: 95%;
+		
+		margin-left: 3% !important;
+		/* margin-right: 10% !important; */
+	}
+	
+	.btn_form_enviar{
+		margin-left: 3% !important;
+	}
+	
+}
+
+/*medium*/
+@media (min-width: 551px) and (max-width: 799px){
+	
+	/* navigation */
+	.header_bar{
+		height: 70px !important;
+	}
+	
+	.navigation{
+		height: 70px !important;
+	}
+	
+	
+	/* social bar ---------------*/
+	.social_bar{
+		margin-top: 0px !important;
+	}
+	
+	.social_table tr td a i{
+		font-size: 20px !important;
+	}
+	
+	/* botones medium media query */
+	.social_table tr td .rd_social_1{
+		margin: 0px !important;
+		padding: 5px !important;
+	}
+	
+	.social_table tr td .rd_social_2{
+		margin: 0px !important;
+		padding: 5px !important;
+	}
+	
+	.social_table tr td .rd_social_3{
+		margin: 0px !important;
+		padding: 5px !important;
+	}
+	
+	/* para el cuarto (elemento de boton) */
+	.social_table tr td .rd_social_4{
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+	
+	.social_table tr td button{
+		margin: 0px !important;
+		padding: 10px !important;
+		/* padding-left: 10px !important;
+		padding-right: 10px !important; */
+		border-Style: none !important;
+		font-size: 20px !important;
+	}
+	
+	
+	/* header */
+	.imgFondoHeader{
+		height: 450px !important;
+	}
+	
+	.texto_pagina{
+		display: none !important;
+	}
+
+	.button_down{
+		display: none !important;
+	}
+	
+	/* tecnologias */
+	.articleTech{
+		display: block;
+		width: 48%;
+		float: right;
+		height: 400px !important;
+	}
+	
+	/* proyectos */
+	.articleProy h4{
+		margin-left: 9% !important; /* 9% */
+		margin-right: 5% !important; /* 5% */
+		font-size: 1.50em !important;
+	}
+	
+	.enlaces_img_proy{
+		/* margin-left: 10% !important; */
+		margin-bottom: 10px !important;
+	}
+	
+	.enlace_img_p{
+		text-align: center !important;
+	}
+	
+	.enlace_img_p1{
+		margin-left: 10%; /* 9% */
+	}
+	
+	.articleProy img{
+		width: 65% !important;
+		height: 50% !important;
+		display: block !important;
+		margin: auto !important;
+	}
+	
+	.articleProy p{
+		margin-left: 10% !important;  /* 9% */
+		margin-right: 4% !important; /* 5% */
+	}
+	
+	/* badges proyectos */
+	.article_badges_box{
+		margin-left: 10% !important; /* 9% */
+		margin-right: 4% !important;  /* 5% */
+	}
+	
+	.articleProy{
+		display: block !important;
+		width: 90% !important;
+		float: left !important;
+	}
+	
+	/* titulos */
+	.artH2{
+		text-align: left !important;
+		margin-left: 8% !important;
+	}
+	
+	/* footer y formulario */
+	.footerH2{
+		text-align: left !important;
+		font-size: 2em !important;
+		margin-left: 8% !important;
+	}
+	
+	.footer_box_red_espace{
+		text-align: left !important;
+		margin-left: 8% !important;
+	}
+	
+	/* modificacion de tamanyo del formulario */
+	.form_input_margin label{
+		margin-left: 15px !important;
+		font-size: 1.25em !important;
+		text-align: justify !important;
+		width: 100px !important;
+	}
+	
+	.input_texto_size{
+		/* width: 200px; */
+		height: 20px !important;
+		font-size: 15px !important;
+		/* margin-left: 5px !important; */
+		/* width: 200px !important; */
+		
+		width: 95%;
+		
+		margin-left: 4% !important;
+		margin-right: 6% !important;
+	}
+	
+	.btn_form_enviar{
+		margin-left: 4% !important;
+	}
+	
+}
+
+/* medium big*/
+@media (min-width: 800px) and (max-width: 999px){
+	
+	/* navigation */
+	.header_bar{
+		height: 70px !important;
+	}
+	
+	.navigation{
+		height: 70px !important;
+	}
+	
+	/* social bar ---------------*/
+	.social_bar{
+		margin-top: 0px !important;
+	}
+	
+	
+	/* botones medium media query */
+	.social_table tr td .rd_social_1{
+		margin: 0px !important;
+		padding: 10px !important;
+	}
+	
+	.social_table tr td .rd_social_2{
+		margin: 0px !important;
+		padding: 10px !important;
+	}
+	
+	.social_table tr td .rd_social_3{
+		margin: 0px !important;
+		padding: 10px !important;
+	}
+	
+	/* para el cuarto (elemento de boton)*/
+	.social_table tr td .rd_social_4{
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+	
+	.social_table tr td button{
+		margin: 0px !important;
+		padding: 10px !important;
+		border-Style: none !important;
+		font-size: 25px !important;
+	}
+	
+	.social_table tr td a i{
+		font-size: 25px !important;
+	}
+	
+	/* header */
+	.imgFondoHeader{
+		height: 600px !important;
+	}
+	
+	.texto_pagina_small{
+		display: none !important;
+	}
+	
+	/* tecnologias */
+	.articleTech{
+		display: block;
+		width: 23%; /* 25% */
+		float: left;
+	}
+	
+	.artTech_margen_left{
+		margin-left: 5% !important;
+	}
+	
+	/* seccion de proyectos */
+	.sectionProyLeft{
+		margin-left: 8% !important;
+	}
+	
+	.articleProy{
+		display: block !important;
+		width: 90% !important;	
+		float: left !important;
+		/* margin-right: 1%; */
+	}
+	
+	.articleProy h4{
+		margin-left: 10% !important;
+		margin-right: 8% !important;
+		font-size: 1.55em !important;
+		font-weight: bold !important;
+	}
+	
+	.enlaces_img_proy{
+		margin-left: 10% !important;
+		margin-bottom: 10px !important;
+	}
+	
+	.articleProy img{
+		width: 65% !important;
+		height: 50% !important;
+		display: block !important;
+		margin: auto !important;
+	}
+	
+	.articleProy p{
+		margin-left: 10% !important;
+		margin-right: 8% !important;
+		font-size: 1.10em;
+	}
+	
+	/* badges proyectos */
+	.article_badges_box{
+		margin-left: 10% !important;
+		margin-right: 8% !important;
+	}
+
+	/* titulos */
+	.artH2{
+		font-size: 3em !important;
+	}
+	
+	/* footer y formulario */
+	.footerH2{
+		text-align: left !important;
+		font-size: 2em !important;
+		margin-left: 10% !important;
+	}
+	
+	.footer_box_red_espace{
+		text-align: left !important;
+		margin-left: 8% !important;
+	}
+	
+	/* modificacion de tamanyo del formulario */
+	.form_input_margin label{
+		margin-left: 20px !important;
+		font-size: 1.25em !important;
+		text-align: justify !important;
+		width: 100px !important;
+	}
+	
+	.input_texto_size{
+		/* width: 200px; */
+		height: 20px !important;
+		font-size: 15px !important;
+		/* margin-left: 5px !important; */
+		/* width: 200px !important; */
+		
+		width: 95%;
+		
+		margin-left: 4% !important;
+		margin-right: 5% !important;
+	}
+	
+	.btn_form_enviar{
+		margin-left: 4% !important;
+	}
+	
+}
+
+/*big*/
+@media (min-width: 1000px){
+	
+	/* navigation */
+	.header_bar{
+		height: 70px !important;
+	}
+	
+	.navigation{
+		height: 70px !important;
+	}
+	
+	/* header */
+	.titulo_pagina{
+		font-size: 2.25em !important;
+	}
+
+	.sub_titulo_pagina{
+		font-size: 2.25em !important;
+	}
+
+	.texto_pagina{
+		font-size: 1.3em !important;
+	}
+
+	.texto_pagina_small{
+		display: none !important;
+	}
+	
+	/* tecnologias */
+	.articleTech{
+		display: block;
+		width: 23%;	/* 25% */
+		float: left;
+	}
+	
+	.artTech_margen_left{
+		margin-left: 5% !important;
+	}
+	
+	/* proyectos */
+	.sectionProy{
+		width: 100% !important;
+	}
+	
+	/*seccion de proyectos */
+	.sectionProyLeft{
+		margin-left: 7% !important;
+	}
+	
+	.articleProy{
+		display: block !important;
+		width: 90% !important;	
+		float: right !important;
+		/*margin-right: 1%;*/
+	}
+	
+	.articleProy h4{
+		/* margin-left: 7% !important; */
+		margin-right: 6% !important;
+		font-size: 1.60em !important;
+		font-weight: bold !important;
+	}
+	
+	.articleProy img{
+		width: 60% !important;
+		height: 50% !important;
+		display: block !important;
+		margin: auto !important;
+	}
+	
+	.articleProy p{
+		/* margin-left: 7% !important; */
+		margin-right: 6% !important; 
+		font-size: 1.10em;
+	}
+	
+	/* badges proyectos */
+	.article_badges_box{
+		/* margin-left: 7% !important; */
+	    margin-right: 6% !important;
+	}
+	
+	/* titulos */
+	.artH2{
+		font-size: 3em !important;
+	}
+	
+	/* footer y formulario */
+	.footerH2{
+		text-align: left !important;
+		font-size: 2em !important;
+		margin-left: 10% !important;
+	}
+	
+	.footer_box_red_espace{
+		text-align: left !important;
+		margin-left: 10% !important;
+	}
+	
+	
+	/* modificacion de tamanyo del formulario */
+	.form_input_margin label{
+		margin-left: 20px !important;
+		font-size: 1.25em !important;
+		text-align: justify !important;
+		width: 100px !important;
+	}
+	
+	.input_texto_size{
+		/* width: 200px; */
+		height: 20px !important;
+		font-size: 15px !important;
+		/* margin-left: 5px !important; */
+		/* width: 300px !important; */
+		width: 95%;
+		
+		margin-left: 4% !important;
+		margin-right: 5% !important;
+	}
+	
+	.btn_form_enviar{
+		margin-left: 4% !important;
+	}
+	
+}
+
+/* 5 estilo principal ------------------- */
+main{
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 70px; /* se aplica para que la barra de enlaces no tape el contenido */
+}
+
+/* imagenes de fondo ------------------ */
+/* imagenes de fondo de los divs intermedios de la web */
+.imgFondo{
+	display:block;
+	background-attachment: fixed;
+	/* background-image: url("image/programming1.png"); */
+	/* height: 400px; */
+	height: 150px;
+	width: 100%;
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.imgFondo1{
+	background-image: url("../assets/image/code2_1280.jpg");
+}
+
+.imgFondo2{
+	background-image: url("../assets/image/code2_1280.jpg");
+}
+
+
+.imgFondo3{
+	background-image: url("../assets/image/computer1.jpg");
+}
+
+/* secciones y texto de secciones */
+.artH2{
+	display: block;
+	text-align: center;
+	margin-top: 65px;
+	margin-bottom: 5px;
+	margin-left: 5%;
+	/* margin-left: 10px; */
+	/* margin-right: 10px; */
+	width: 90%;
+	font-size: 2em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.sectionSkills, .sectionTrayect, .sectionProy, .sectionTech, .articleProyInicial{
+	display: block;
+	width: 100%;
+	float:left;
+}
+
+
+.articleProy h4{
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.articleProy p{
+	text-align: justify;
+}
+
+/* enlaces de proyectos ---------------- */
+/* enlace del primer proyecto */
+.enlace_img_p1{
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+.enlace_img_p1 a{
+	padding: 2px;
+	margin-right: 5px;
+	font-size: 14px;
+	color: white;
+}
+
+.enlace_img_p1 .enlace_img_p_github{
+	background-color:  #000000;
+	transition-duration: 0.4s;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	border-radius: 10px;
+	border-Style: solid;
+	border-color: #000;
+	border-width: 2px;
+}
+
+.enlace_img_p1 .enlace_img_p_github:hover{
+	background-color: #7800D0;
+}
+
+/* enlaces proyectos */
+.enlaces_img_proy{
+	display: block;
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/* margin-left: 5%; */
+}
+
+.enlace_img_p{
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: left;
+}
+
+
+
+.enlace_img_p a{
+	padding: 2px;
+	margin-right: 5px;
+	font-size: 14px;
+	color: white;
+}
+
+.enlace_img_p .enlace_img_p_youtube{
+	background-color: #FF0000;
+	transition-duration: 0.4s;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	border-radius: 10px;
+	border-Style: solid;
+	border-color: #000;
+	border-width: 2px;
+}
+
+.enlace_img_p .enlace_img_p_youtube:hover{
+	background-color: #850000;
+}
+
+
+.enlace_img_p .enlace_img_p_github{
+	background-color:  #000000;
+	transition-duration: 0.4s;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	border-radius: 10px;
+	border-Style: solid;
+	border-color: #000;
+	border-width: 2px;
+}
+
+.enlace_img_p .enlace_img_p_github:hover{
+	background-color: #7800D0;
+}
+
+
+/* badges de proyectos ---------------------- */
+.article_badges_box{
+	align-items: left;
+	/* margin-top: 5px; */
+	width: 95%;
+	margin-right: 1%;
+	height: 40px;
+	margin-bottom: 5px;
+	
+}
+
+.article_badges_box p{
+	text-align: center;
+	font-size: 14px;
+	margin: 0px;
+	margin-top: 2px;
+	font-family: sans-serif !important;
+}
+
+.article_badge{
+	display: block;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	width: 80px;
+	height: 20px;
+	cursor: pointer;
+}
+
+
+/* colores badges */
+.article_badge_HTML{
+	background: #0000FF;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_HTML:hover{
+	background: #00008c;
+}
+
+.article_badge_CSS{
+	background: #00AA00;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_CSS:hover{
+	background: #004000;
+}
+
+.article_badge_JS{
+	background: #ff9326;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_JS:hover{
+	background: #d96c00;
+}
+
+.article_badge_TYPE {
+	background: #ff9326;
+	color: #FFF;
+	width: 120px !important;
+	transition-duration: 0.4s;
+}
+
+.article_badge_TYPE:hover{
+	background: #d96c00;
+}
+
+.article_badge_ANGULAR{
+	background: #FF4922;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_ANGULAR:hover{
+	background: #D33B1B;
+}
+
+.article_badge_JAVA{
+	background: #d90000;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_JAVA:hover{
+	background: #8c0000;
+}
+
+.article_badge_SPRING{
+	background: #d90000;
+	color: #FFF;
+	width: 120px !important;
+	transition-duration: 0.4s;
+}
+
+.article_badge_SPRING:hover{
+	background: #8c0000;
+}
+
+.article_badge_CS{
+	background: #4cd2ff;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_CS:hover{
+	background: #0086b3;
+}
+
+.article_badge_WPF{
+	background: #9326ff;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_WPF:hover{
+	background: #46008c;
+}
+
+.article_badge_MYSQL{
+	background: #ff00bf;
+	color: #FFF;
+	transition-duration: 0.4s;
+}
+
+.article_badge_MYSQL:hover{
+	background: #8c008c;
+}
+
+/* estilos seccion tecnologias ------------------- */
+/* article tech */
+.articleTech{
+	margin-top: 25px;
+}
+
+/* lista de la descripcion de las tecnologias*/
+.lista_tech{
+	text-align: left;
+}
+
+.container{
+	/* position: relative; */
+	position: static;
+	width: 100%;
+	/* display: flex; */
+	display: block;
+	/* justify-content: space-around; */
+}
+
+.container .card{
+	position: static;
+	/* position: relative; */
+	width: 100%;
+	/* background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b); */
+	display: flex;
+	/* display: block; */
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	/* border-radius: 4px; */
+	text-align: center;
+	/* overflow: hidden;
+	transition: 0.5s; */
+}
+
+
+/* progress bar circular ------------- */
+.articleTech{
+	/* position: relative; */
+	display: block;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+}
+
+.texto_circulo{
+	font-family: sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	/*
+	stroke: black; 
+	stroke-width: 1px;*/
+	
+}
+
+svg{
+	position: static;
+	/* position: relative; */
+	width: 150px;
+	height: 150px;
+	z-index: 1000;
+}
+
+svg circle{
+	position: static; /* nueva propiedad*/
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: #b3b3b3;
+	/* stroke: transparent; */
+	stroke-width: 10;
+	stroke-linecap: round;
+	transform: translate(5px,5px);
+}
+
+svg circle:nth-child(2){
+	stroke-dasharray: 440;
+	stroke-dashoffset: 440;
+}
+
+
+#cirProgress1 svg circle:nth-child(2){
+	stroke-dashoffset: calc(440 - (440 * 85) / 100);
+	stroke: #b30000;
+}
+
+#cirProgress2 svg circle:nth-child(2){
+	stroke-dashoffset: calc(440 - (440 * 90) / 100);
+	stroke: #00b300;
+}
+
+#cirProgress3 svg circle:nth-child(2){
+	stroke-dashoffset: calc(440 - (440 * 60) / 100);
+	stroke: #d96c00;
+}
+
+#cirProgress4 svg circle:nth-child(2){
+	stroke-dashoffset: calc(440 - (440 * 90) / 100);
+	stroke: #3333ff;
+}
+
+/*6 Estilos del footer ----------- */
+/* footer redes */
+.footer-content{
+	height:200px;
+	width: 100%;
+	display: block;
+	background-color: #FFF;
+	float: left;
+	/* margin-left: 8%; */
+}
+
+.footerH2{
+	text-align: left;
+}
+
+.footer_box_red_espace{
+	margin-top: 20px;
+	margin-bottom: 30px;
+	display: block;
+	width: 90%;
+	height: 100px;
+}	
+
+/* para pantalla muy pequenya */
+@media (max-width: 400px){
+	.footer_box_red_espace {
+		height: 170px !important;
+	}
+}
+
+@media (max-width: 209px){
+	.footer_box_red_espace {
+		height: 310px !important;
+	}
+}
+
+.footer_box_red{
+	display: block;
+	float: left;
+}
+
+.footer_redes_youtube{
+	
+	border-Style: solid;
+	border-color: #000;
+	border-width: 4px;
+	border-radius: 10px;
+	
+	margin: 5px;
+	
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #FF0000; 
+	border-radius: 10px;
+	transition-duration: 0.4s;
+}
+
+.footer_redes_youtube:hover{
+	background-color: #850000;
+}
+
+.footer_redes_youtube a{
+	color: white;
+	font-size: 35px;
+	text-align: center;
+}
+
+
+
+
+.footer_redes_linkedin{
+	
+	border-Style: solid;
+	border-color: #000;
+	border-width: 4px;
+	border-radius: 10px;
+	
+	margin: 5px;
+	
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 21px;
+	padding-right: 21px;
+	background-color: #006CFF;
+	border-radius: 10px;
+	transition-duration: 0.4s;
+}
+
+
+.footer_redes_linkedin:hover{
+	background-color: #001885;
+}
+
+.footer_redes_linkedin a{
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+
+.footer_redes_github{
+	
+	border-Style: solid;
+	border-color: #000;
+	border-width: 4px;
+	border-radius: 10px;
+	
+	margin: 5px;
+	
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 17px;
+	padding-right: 17px;
+	background-color: #000000;
+	border-radius: 10px;
+	transition-duration: 0.4s;
+}
+
+.footer_redes_github:hover{
+	background-color: #7800D0;
+}
+
+.footer_redes_github a{
+	color: white;
+	font-size: 35px;
+	text-align: center;
+}
+
+
+/*Nota: en este se aplica */
+.footer_redes_email{
+	
+	border-Style: solid;
+	border-color: #000;
+	border-width: 4px;
+	border-radius: 10px;
+	
+	margin: 5px;
+	
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 18px;
+	padding-right: 18px;
+	background-color: #ADADAD;
+	border-radius: 10px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.footer_redes_email:hover{
+	background-color: #FFFFFF;
+}
+
+.footer_redes_email i{
+	color: white;
+	font-size: 35px;
+	text-align: center;
+	color: black !important;
+}
+
+/* footer formulario --------- */
+/* formulario */
+.footer_form{
+	display: block;
+	width: auto;
+	height: 250px;
+	margin-bottom: 100px;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-Style: solid;
+	border-color: black;
+}
+
+.footer_form h1{
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+} 
+
+.footer_form form{
+	margin-left: 5%;
+	margin-right: 5%;
+	
+}
+
+
+.form_input_margin input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	border-Style: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+.btn_form_enviar{
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	margin-left: 0px;
+	cursor: pointer;
+	background-color: #00AA00;
+	transition-duration: 0.4s;
+	color: white;
+	
+}
+
+.btn_form_enviar:hover{
+	background-color: #004000;
+}
+
+.btn_form_cancel{
+	margin-bottom: 70px !important;
+	border-radius: 5px;
+	padding: 5px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	cursor: pointer;
+	background-color: #d90000;
+	transition-duration: 0.4s;
+	color: white;
+}
+
+.btn_form_cancel:hover{
+	background-color: #8c0000;
+}
