@@ -15,6 +15,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 		
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 	</head>
 	
 	<body>
@@ -414,14 +416,16 @@
 						
 						<input type="text" name="mensaje" placeholder="Mensaje" required class="input_texto_size">
 						<br>
+
+						<div class="g-recaptcha" data-sitekey="6Lc86xobAAAAALV5pVnwDT_kLQIh8QTJYEElK7G4"></div>
+      					<br/>
 						
 						<div style="display: none;">
 							<label for="control">(Si se ve, no completar, campo de control)</label>
 							<input type="text" class="input_texto_size" id="controlSpam" name="control">
 						</div>
 						
-						<!-- capcha -->
-						<!-- <input class="btn_form_enviar" type="submit" id="btnenv" value="Enviar"> -->
+						<input class="btn_form_enviar" type="submit" id="btnenv" value="Enviar">
 						<input class="btn_form_cancel" type="reset" id="btncancel" value="Borrar">
 					</form>
 					

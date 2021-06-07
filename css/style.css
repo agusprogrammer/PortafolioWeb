@@ -531,6 +531,10 @@ se cambia con la parte 4 de media querys))*/
 		/*margin-right: 10% !important; */
 	}
 	
+	.g-recaptcha{
+		margin-left: 3% !important;
+	}
+
 	.btn_form_enviar{
 		margin-left: 3% !important;
 	}
@@ -652,6 +656,10 @@ se cambia con la parte 4 de media querys))*/
 		/* margin-right: 10% !important; */
 	}
 	
+	.g-recaptcha{
+		margin-left: 3% !important;
+	}
+
 	.btn_form_enviar{
 		margin-left: 3% !important;
 	}
@@ -818,6 +826,10 @@ se cambia con la parte 4 de media querys))*/
 		margin-right: 6% !important;
 	}
 	
+	.g-recaptcha{
+		margin-left: 4% !important;
+	}
+
 	.btn_form_enviar{
 		margin-left: 4% !important;
 	}
@@ -978,6 +990,10 @@ se cambia con la parte 4 de media querys))*/
 		margin-right: 5% !important;
 	}
 	
+	.g-recaptcha{
+		margin-left: 4% !important;
+	}
+
 	.btn_form_enviar{
 		margin-left: 4% !important;
 	}
@@ -1107,6 +1123,10 @@ se cambia con la parte 4 de media querys))*/
 		margin-right: 5% !important;
 	}
 	
+	.g-recaptcha{
+		margin-left: 4% !important;
+	}
+
 	.btn_form_enviar{
 		margin-left: 4% !important;
 	}
@@ -1678,7 +1698,7 @@ svg circle:nth-child(2){
 .footer_form{
 	display: block;
 	width: auto;
-	height: 250px;
+	height: 350px;
 	margin-bottom: 100px;
 	margin-left: 5%;
 	margin-right: 5%;
