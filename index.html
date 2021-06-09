@@ -48,7 +48,7 @@
 				<tr><td class="rd_social_3 tooltip"><a href="https://github.com/agusprogrammer"><i class="fab fa-github"></i></a><span class="tooltiptext">Github</span></td></tr>
 				<tr><td class="rd_social_4 tooltip">
 					<button onclick="openCloseForm()">
-						<i class="fas fa-envelope"></i></a><span class="tooltiptext">E-Mail</span>
+						<i class="fas fa-envelope"></i></a><span class="tooltiptext">Envia un mensaje</span>
 					</button>
 				</td></tr>
 				
@@ -211,7 +211,7 @@
 					
 					<p>Este portafolio el cual estas viendo ahora 
 					mismo es el primer proyecto que te presento, 
-					para hacerlo he usado HTML, CSS, Javascript y algo de php, 
+					para hacerlo he usado HTML, CSS y algo de Javascript 
 					es la web donde presento a mis otros proyectos 
 					y acceder a mi contacto, también he usado el diseño responsive.</p>
 					
@@ -250,7 +250,6 @@
 						<div class="enlace_img_p">
 							<a class="enlace_img_p_youtube" href="https://www.youtube.com/watch?v=2250tNoobAQ"><i class="fab fa-youtube"></i></a>
 							<a class="enlace_img_p_github" href="https://github.com/agusprogrammer/ProyectoInventarioCodigo"><i class="fab fa-github"></i></a>
-							
 						</div>
 					</div>
 					
@@ -288,7 +287,6 @@
 						<div class="enlace_img_p">
 							<a class="enlace_img_p_youtube" href="https://www.youtube.com/watch?v=fSJua50EehU"><i class="fab fa-youtube"></i></a>
 							<a class="enlace_img_p_github" href="https://github.com/agusprogrammer/ProyectoTPVCodigo"><i class="fab fa-github"></i></a>
-							
 						</div>
 					</div>
 					
@@ -409,12 +407,13 @@
 					
 					<h1>Formulario</h1>
 					
-					<form class="form_input_margin" action="form.php" onsubmit="return controlForm();" method="post" enctype="text/plain">
+					<form class="form_input_margin" name="contact" onsubmit="return controlForm();" method="post" data-netlify="true">
 					
 						<input type="email" name="email" placeholder="email@gmail.com" required class="input_texto_size">
 						<br>
 						
-						<input type="text" name="mensaje" placeholder="Mensaje" required class="input_texto_size">
+						<!-- <input type="text" name="mensaje" placeholder="Mensaje" required class="input_texto_size"> -->
+						<textarea name="mensaje" placeholder="Mensaje" required class="input_texto_size text_area_size"></textarea>
 						<br>
 
 						<div class="g-recaptcha" data-sitekey="6LcKXx4bAAAAAN2Xm3RPSd4xxCkagsy_xA-Fap9U"></div>

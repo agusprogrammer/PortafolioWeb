@@ -1698,7 +1698,7 @@ svg circle:nth-child(2){
 .footer_form{
 	display: block;
 	width: auto;
-	height: 350px;
+	height: 430px;
 	margin-bottom: 100px;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -1717,7 +1717,6 @@ svg circle:nth-child(2){
 	
 }
 
-
 .form_input_margin input{
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -1725,6 +1724,21 @@ svg circle:nth-child(2){
 	border-Style: solid;
 	border-color: black;
 	border-width: 2px;
+}
+
+.form_input_margin textarea{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+	border-Style: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+.text_area_size{
+	/* outline: none; */
+    resize: none !important;
+	height: 100px !important;
 }
 
 .btn_form_enviar{
