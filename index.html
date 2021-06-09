@@ -407,7 +407,7 @@
 					
 					<h1>Formulario</h1>
 					
-					<form class="form_input_margin" name="contact" onsubmit="return controlForm();" action="/" method="POST" data-netlify="true">
+					<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="form_input_margin">
 					
 						<input type="email" name="email" placeholder="email@gmail.com" required class="input_texto_size">
 						<br>
@@ -415,15 +415,13 @@
 						<!-- <input type="text" name="mensaje" placeholder="Mensaje" required class="input_texto_size"> -->
 						<textarea name="mensaje" placeholder="Mensaje" required class="input_texto_size text_area_size"></textarea>
 						<br>
+						
+						<p class="hidden_hpot">
+							<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+						</p>
 
-						<div class="g-recaptcha" data-sitekey="6LcKXx4bAAAAAN2Xm3RPSd4xxCkagsy_xA-Fap9U"></div>
-      					<br/>
-						
-						<div style="display: none;">
-							<label for="control">(Si se ve, no completar, campo de control)</label>
-							<input type="text" class="input_texto_size" id="controlSpam" name="control">
-						</div>
-						
+						<div data-netlify-recaptcha="true" class="g-recaptcha"></div>
+
 						<input class="btn_form_enviar" type="submit" id="btnenv" value="Enviar">
 						<input class="btn_form_cancel" type="reset" id="btncancel" value="Borrar">
 					</form>

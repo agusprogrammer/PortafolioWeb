@@ -1741,6 +1741,11 @@ svg circle:nth-child(2){
 	height: 100px !important;
 }
 
+/* honeypot */
+.hidden_hpot {
+	display: none;
+}
+
 .btn_form_enviar{
 	border-radius: 5px;
 	padding: 5px;
