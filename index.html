@@ -409,18 +409,18 @@
 					
 					<form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" class="form_input_margin">
 					
-						<input type="email" name="email" placeholder="email@gmail.com" required class="input_texto_size">
+						<input type="email" name="email" required class="input_texto_size">
 						<br>
 						
 						<!-- <input type="text" name="mensaje" placeholder="Mensaje" required class="input_texto_size"> -->
-						<textarea name="mensaje" placeholder="Mensaje" required class="input_texto_size text_area_size"></textarea>
+						<textarea name="mensaje" required class="input_texto_size text_area_size"></textarea>
 						<br>
 						
 						<p class="hidden_hpot">
 							<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
 						</p>
 
-						<div data-netlify-recaptcha="true" class="g-recaptcha"></div>
+						<div data-netlify-recaptcha="true"></div>
 
 						<input class="btn_form_enviar" type="submit" id="btnenv" value="Enviar">
 						<input class="btn_form_cancel" type="reset" id="btncancel" value="Borrar">
