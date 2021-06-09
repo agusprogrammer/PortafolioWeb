@@ -518,6 +518,14 @@ se cambia con la parte 4 de media querys))*/
 		margin-left: 5% !important;
 	}
 	
+	/* modificacion de tamanyo del formulario */
+	.form_input_margin label{
+		margin-left: 3% !important;
+		font-size: 1.25em !important;
+		text-align: justify !important;
+		width: 100px !important;
+	}
+
 	.input_texto_size{
 		/* width: 200px; */
 		height: 20px !important;
@@ -643,6 +651,14 @@ se cambia con la parte 4 de media querys))*/
 		margin-left: 5% !important;
 	}
 	
+	/* modificacion de tamanyo del formulario */
+	.form_input_margin label{
+		margin-left: 3% !important;
+		font-size: 1.25em !important;
+		text-align: justify !important;
+		width: 100px !important;
+	}
+
 	.input_texto_size{
 		/* width: 200px; */
 		height: 20px !important;
@@ -807,7 +823,7 @@ se cambia con la parte 4 de media querys))*/
 	
 	/* modificacion de tamanyo del formulario */
 	.form_input_margin label{
-		margin-left: 15px !important;
+		margin-left: 4% !important;
 		font-size: 1.25em !important;
 		text-align: justify !important;
 		width: 100px !important;
@@ -971,7 +987,7 @@ se cambia con la parte 4 de media querys))*/
 	
 	/* modificacion de tamanyo del formulario */
 	.form_input_margin label{
-		margin-left: 20px !important;
+		margin-left: 4% !important;
 		font-size: 1.25em !important;
 		text-align: justify !important;
 		width: 100px !important;
@@ -1105,7 +1121,7 @@ se cambia con la parte 4 de media querys))*/
 	
 	/* modificacion de tamanyo del formulario */
 	.form_input_margin label{
-		margin-left: 20px !important;
+		margin-left: 4% !important;
 		font-size: 1.25em !important;
 		text-align: justify !important;
 		width: 100px !important;
