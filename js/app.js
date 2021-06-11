@@ -43,20 +43,6 @@ function openCloseForm() {
 	}
 }
 
-/* control anti spam (metodo honey pot) */
-function controlForm() {
-	
-	// Si el campo está vacío, envía el formulario.
-	if(!document.getElementById("controlSpam").value) { 
-		return true;
-	}
-	
-	// Si el campo tiene algún valor, es un spam bot
-	else {
-		return false;
-	}
-}
-
 /* detectar scroll y ocultar social bar cunado te acercas al footer
 (oculta la social bar cuando se va al footer)*/
 window.onscroll = function() {
